@@ -1,10 +1,12 @@
-﻿Shader "Custom/Base" {
+﻿Shader "Cory/Base" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white"{}
 		_NormalTex ("Normal", 2D) = "bump"{}
-		_Glossiness ("Shine", Range(0,1)) = 0.5
-		_Metallic ("Metallic", Range(0,1)) = 0.0
+		_Glossiness ("Shine", Range(0,10)) = 0.5
+		_Metallic ("Metallic", Range(0,10)) = 0.0
+		_Thickness("Thickness", float) = 0
+
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
@@ -20,13 +22,14 @@
 		sampler2D _MainTex;
 		sampler2D _NormalTex;
 
-		struct Input {
+		struct Input
+		{
 			float2 uv_MainTex;
 			float2 uv_NormalTex;
 		};
 
-		half _Glossiness;
-		half _Metallic;
+		half4 _Glossiness;
+		half4 _Metallic;
 		fixed4 _Color;
 
 		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.

@@ -8,7 +8,6 @@
 		_Metallic("Metallic", Range(0,1)) = 0.0
 
 		_Blood ("Level of Blood", Range(-2, 2)) = -2.0
-
 		_BloodColor ("Color of Blood", Color) = (3.0, 0.0, 0.0, 1.0)
 		_BloodDirection ("Direction of Blood", Vector) = (0,1,0)
 		_BloodDepth ("Depth of Blood", Range(1,-1)) = 0
@@ -46,7 +45,7 @@
 		
 		void vert(inout appdata_full v)
 		{
-			float4 sn = mul(_BloodDirection, unity_WorldToObject);
+			float4 sn = mul(_BloodDirection, unity_ObjectToWorld);
 			
 			if (dot(v.normal, sn.xyz) >= _Blood)
 			{

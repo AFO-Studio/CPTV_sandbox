@@ -85,6 +85,7 @@ Material:
     - _SnowDepth: 0.0001
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Thickness: 3.05
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
