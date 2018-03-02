@@ -6,4 +6,4 @@ The premise is that you, the player, have been captured and forced to fight to t
 Fight to survive in a non-stop action fest
 
 
-#this project is very young and needs help. If you would like to contribute please do.
+# this project is very young and needs help. If you would like to contribute please do.
