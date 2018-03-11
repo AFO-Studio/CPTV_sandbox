@@ -3077,47 +3077,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!1 &1402228551 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1407626111566982, guid: ebeef44284fcc244787d324f20c00ea2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1698602959}
---- !u!108 &1402228552
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1402228551}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 0.5808823, b: 0.5808823, a: 0.753}
-  m_Intensity: 7
-  m_Range: 1.82
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 2
-    m_NormalBias: 0
-    m_NearPlane: 0.02
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &1462018053 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 10f9da31cc41b43499b176335378133c, type: 3}
@@ -3792,53 +3751,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4546313401540758, guid: ebeef44284fcc244787d324f20c00ea2, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4546313401540758, guid: ebeef44284fcc244787d324f20c00ea2, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4546313401540758, guid: ebeef44284fcc244787d324f20c00ea2, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65362899932415438, guid: ebeef44284fcc244787d324f20c00ea2,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 8.59178
-      objectReference: {fileID: 0}
-    - target: {fileID: 65362899932415438, guid: ebeef44284fcc244787d324f20c00ea2,
-        type: 2}
-      propertyPath: m_Center.y
-      value: -0.37588504
-      objectReference: {fileID: 0}
-    - target: {fileID: 65362899932415438, guid: ebeef44284fcc244787d324f20c00ea2,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 12.531669
-      objectReference: {fileID: 0}
-    - target: {fileID: 65362899932415438, guid: ebeef44284fcc244787d324f20c00ea2,
-        type: 2}
-      propertyPath: m_Center.x
-      value: 0.017782249
-      objectReference: {fileID: 0}
-    - target: {fileID: 65362899932415438, guid: ebeef44284fcc244787d324f20c00ea2,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 11.393214
-      objectReference: {fileID: 0}
-    - target: {fileID: 65362899932415438, guid: ebeef44284fcc244787d324f20c00ea2,
-        type: 2}
-      propertyPath: m_Center.z
-      value: -0.25849542
-      objectReference: {fileID: 0}
-    - target: {fileID: 23577812384982506, guid: ebeef44284fcc244787d324f20c00ea2,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4285dd253a8185e42a80a9a4d57606b1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebeef44284fcc244787d324f20c00ea2, type: 2}
   m_IsPrefabParent: 0
