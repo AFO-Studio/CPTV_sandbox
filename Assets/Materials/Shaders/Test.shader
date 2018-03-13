@@ -1,4 +1,4 @@
-﻿Shader "Custom/Test" {
+﻿Shader "Cory/Test" {
 	Properties {
 
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
@@ -7,10 +7,10 @@
 		_Glossiness("Glossy", Range(0,1)) = 0.5
 		_Metallic("Metallic", Range(0,1)) = 0.0
 
-		_Blood ("Level of Blood", Range(-2, 2)) = -2.0
-		_BloodColor ("Color of Blood", Color) = (3.0, 0.0, 0.0, 1.0)
-		_BloodDirection ("Direction of Blood", Vector) = (0,1,0)
-		_BloodDepth ("Depth of Blood", Range(1,-1)) = 0
+		_Power ("Level of Power", Range(-2, 2)) = -2.0
+		_PowerColor ("Color of Power", Color) = (3.0, 0.0, 0.0, 1.0)
+		_PowerDirection ("Direction of Power", Vector) = (0,1,0)
+		_PowerDepth ("Depth of Power", Range(1,-1)) = 0
 
 	}
 	SubShader
@@ -29,11 +29,11 @@
 		half _Glossiness;
 		half _Metallic;
 
-		float _Blood;
-		float4 _BloodColor;
+		float _Power;
+		float4 _PowerColor;
 		float4 _Color;
-		float4 _BloodDirection;
-		float _BloodDepth;
+		float4 _PowerDirection;
+		float _PowerDepth;
 
 		struct Input
 		{
@@ -45,11 +45,11 @@
 		
 		void vert(inout appdata_full v)
 		{
-			float4 sn = mul(_BloodDirection, unity_ObjectToWorld);
+			float4 sn = mul(_PowerDirection, unity_ObjectToWorld);
 			
-			if (dot(v.normal, sn.xyz) >= _Blood)
+			if (dot(v.normal, sn.xyz) >= _Power)
 			{
-				v.vertex.xyz += (sn.xyz + v.normal) * _BloodDepth * _Blood;
+				v.vertex.xyz += (sn.xyz + v.normal) * _PowerDepth * _Power;
 			}
 		}
 
@@ -60,9 +60,9 @@
 		{
 			half4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
 			o.Normal = UnpackNormal(tex2D(_NormalMap, IN.uv_NormalMap));
-			if (dot(WorldNormalVector(IN, o.Normal), _BloodDirection.xyz) <= _Blood)
+			if (dot(WorldNormalVector(IN, o.Normal), _PowerDirection.xyz) <= _Power)
 			{
-				o.Albedo = _BloodColor.rgb;
+				o.Albedo = _PowerColor.rgb;
 			}
 			else
 			{
