@@ -1977,6 +1977,7 @@ MonoBehaviour:
   pickupPrompt: {fileID: 0}
   pickUp_text: {fileID: 0}
   Sword: {fileID: 1650794585543054}
+  SwordEquiped: 0
 --- !u!114 &114093829025541486
 MonoBehaviour:
   m_ObjectHideFlags: 1
