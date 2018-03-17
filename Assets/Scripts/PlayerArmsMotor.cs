@@ -7,24 +7,38 @@ public class PlayerArmsMotor : MonoBehaviour {
 
     public Animator anim;
     public GameObject sword;
+    public GameObject shotgun;
 
-    bool Activate;
+    bool emptyHands;
 
-	// Use this for initialization
+	
 	void Start ()
     {
         anim.SetBool("isIdleUnarmed", true);
     }
 	
-	// Update is called once per frame
+	
 	void Update ()
     {
-		if(sword.activeSelf == true)
+		if(sword.activeSelf == true 
+            || shotgun.activeSelf == true)
+        {
+            emptyHands = false;
+        }
+
+
+        if(emptyHands == false)
         {
             anim.SetBool("isIdleUnarmed", false);
-
         }
-        if (sword.activeSelf == false && Input.GetMouseButtonDown(0))
+        if (emptyHands == true)
+        {
+            anim.SetBool("isIdleUnarmed", true);
+        }
+
+
+
+        if (emptyHands == true && Input.GetMouseButtonDown(0))
         {
             anim.SetBool("isPunching", true);
         }
@@ -35,11 +49,6 @@ public class PlayerArmsMotor : MonoBehaviour {
 
         
 
-        if (sword.activeSelf == false)
-        {
-            anim.SetBool("isIdleUnarmed", true);
-        }
-
         if (sword.activeSelf == true && Input.GetMouseButtonDown(0))
         {
             anim.SetBool("isStabbingSword", true);
@@ -48,6 +57,30 @@ public class PlayerArmsMotor : MonoBehaviour {
         {
             anim.SetBool("isStabbingSword", false);
         }
+
+
+
+        if (shotgun.activeSelf == true)
+        {
+            anim.SetBool("isIdleShotgun", true);
+        }
+        else
+        {
+            anim.SetBool("isIdleShotgun", false);
+        }
+
+
+
+
+        if (shotgun.activeSelf == true && Input.GetMouseButtonDown(0))
+        {
+            anim.SetBool("isShootShotgun", true);
+        }
+        else
+        {
+            anim.SetBool("isShootShotgun", false);
+        }
+
     }
 
     private void OnTriggerStay(Collider col)

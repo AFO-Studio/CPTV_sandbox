@@ -12,6 +12,7 @@ TagManager:
   - Bandage
   - Sword
   - EyeSight
+  - Shotgun
   layers:
   - Default
   - TransparentFX
