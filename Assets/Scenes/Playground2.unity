@@ -12246,15 +12246,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 12c58dc0f35d5ce4187e2c929936091f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.04
+      value: -1.48
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12c58dc0f35d5ce4187e2c929936091f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 4.03
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12c58dc0f35d5ce4187e2c929936091f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 35.65
+      value: 38.14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12c58dc0f35d5ce4187e2c929936091f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -12288,6 +12288,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 168.402
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 12c58dc0f35d5ce4187e2c929936091f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 836f1915f14abe54c9ce00926dfff410, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12c58dc0f35d5ce4187e2c929936091f, type: 3}
   m_IsPrefabParent: 0
@@ -13403,7 +13407,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 6acb458e3627cfb47b3a6cc6e8cbde22, type: 2}
-  - {fileID: 2100002, guid: a1cfcb23a7f390848a0ad0eba679e812, type: 3}
+  - {fileID: 2100000, guid: 6acb458e3627cfb47b3a6cc6e8cbde22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
