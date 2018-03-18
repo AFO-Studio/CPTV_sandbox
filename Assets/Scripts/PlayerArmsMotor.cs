@@ -9,9 +9,12 @@ public class PlayerArmsMotor : MonoBehaviour {
     public GameObject sword;
     public GameObject shotgun;
 
-    bool emptyHands;
+    public GameObject muzzleFlash1;
+    public GameObject muzzleFlash2;
 
-	
+    bool emptyHands;
+    [SerializeField]
+    float time = 0.0f;
 	void Start ()
     {
         anim.SetBool("isIdleUnarmed", true);
@@ -24,6 +27,10 @@ public class PlayerArmsMotor : MonoBehaviour {
             || shotgun.activeSelf == true)
         {
             emptyHands = false;
+        }
+        else
+        {
+            emptyHands = true;
         }
 
 
@@ -63,6 +70,7 @@ public class PlayerArmsMotor : MonoBehaviour {
         if (shotgun.activeSelf == true)
         {
             anim.SetBool("isIdleShotgun", true);
+            
         }
         else
         {
@@ -74,13 +82,28 @@ public class PlayerArmsMotor : MonoBehaviour {
 
         if (shotgun.activeSelf == true && Input.GetMouseButtonDown(0))
         {
-            anim.SetBool("isShootShotgun", true);
+            
+            StartCoroutine(ShotgunFire());
+            
         }
         else
         {
-            anim.SetBool("isShootShotgun", false);
+            StopCoroutine(ShotgunFire());
+            
         }
 
+    }
+
+    IEnumerator ShotgunFire()
+    {
+        anim.SetBool("isShootShotgun", true);
+        muzzleFlash1.SetActive(true);
+        muzzleFlash2.SetActive(true);
+        yield return new WaitForSeconds(time);
+
+        anim.SetBool("isShootShotgun", false);
+        muzzleFlash1.SetActive(false);
+        muzzleFlash2.SetActive(false);
     }
 
     private void OnTriggerStay(Collider col)
