@@ -6,12 +6,10 @@ public class shoot : MonoBehaviour
 {
 	public Rigidbody bullet;
 	public Transform firePoint;
-    public GameObject Player;
 
     Animator anim;
 	void Start()
 	{
-        anim = Player.GetComponent<Animator>();
 	}
 
 	void Update()
@@ -19,7 +17,6 @@ public class shoot : MonoBehaviour
 
 		if (Input.GetMouseButton(0))
 		{
-            anim.Play("isShooting", -1, 0f);
             Instantiate(bullet, firePoint.position, firePoint.rotation);
 		}
 	}

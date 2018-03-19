@@ -146,6 +146,10 @@ PlayerSettings:
       maximumSupportedHeadTracking: 1
     hololens:
       depthFormat: 1
+      depthBufferSharingEnabled: 0
+    oculus:
+      sharedDepthBuffer: 0
+      dashSupport: 0
   protectGraphicsMemory: 0
   useHDRDisplay: 0
   m_ColorGamuts: 00000000
@@ -637,9 +641,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: b77eb9e3-4811-4fdc-b1a5-a4ae234ec938
-  projectName: fps 1
-  organizationId: roe1
+  cloudProjectId: 2f18ff03-03dd-4447-bd3d-3d8a9a047a43
+  projectName: CPTV
+  organizationId: a-f-o-studio
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

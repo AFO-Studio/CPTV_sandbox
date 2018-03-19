@@ -1,4 +1,4 @@
-﻿Shader "Cory/Test" {
+﻿Shader "CPTV/Test" {
 	Properties {
 
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}

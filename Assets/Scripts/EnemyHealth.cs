@@ -41,12 +41,22 @@ public class EnemyHealth : MonoBehaviour {
     {
         healthVal -= damage;
     }
+    public void minusHealthPellet()
+    {
+        healthVal -= damage * 3;
+    }
 
     private void OnTriggerStay(Collider col)
     {
         if (col.gameObject.tag == "Sword")
         {
             minusHealth();
+            PlayerStats playerScript = FindObjectOfType<PlayerStats>();
+            playerScript.addXP();
+        }
+        if (col.gameObject.tag == "Bullet")
+        {
+            minusHealthPellet();
             PlayerStats playerScript = FindObjectOfType<PlayerStats>();
             playerScript.addXP();
         }

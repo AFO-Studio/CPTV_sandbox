@@ -15,6 +15,7 @@ public class PlayerArmsMotor : MonoBehaviour {
     bool emptyHands;
     [SerializeField]
     float time = 0.0f;
+
 	void Start ()
     {
         anim.SetBool("isIdleUnarmed", true);

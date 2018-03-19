@@ -39,33 +39,33 @@ void Update()
 
 
     Vector3 direction = player.position - transform.position;
-
 		//float angle = Vector3.Angle (direction, transform.forward);
 
         if (Vector3.Distance(player.position, transform.position) > distanceFromTarget)
         {
             transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, targetRotation, Time.deltaTime * directionChangeInterval);
-		    //var forward = transform.TransformDirection(Vector3.forward);
-            //agent.SetDestination(IdleHome.position);
-        }
-
-        if (Vector3.Distance (player.position, transform.position) < distanceFromTarget)
-		{
-            direction.y = 180;
-			anim.SetBool("isIdle", false);
-            anim.SetBool("isWalking", true);
-            agent.SetDestination(player.position);
-        }
-		else
-		{
-            transform.position += transform.forward * 0 * Time.deltaTime;
+            //var forward = transform.TransformDirection(Vector3.forward);
+            agent.destination = gameObject.transform.position;
             anim.SetBool("isIdle", true);
-			anim.SetBool("isWalking", false);
-		 	anim.SetBool("isAttacking", false);
-		}
+        }
 
-		
-	}
+        if (Vector3.Distance(player.position, transform.position) < distanceFromTarget)
+        {
+            direction.y = 180;
+            agent.SetDestination(player.position);
+            anim.SetBool("isWalking", true);
+            anim.SetBool("isIdle", false);
+        }
+        else
+        {
+            //transform.position += transform.forward * 0 * Time.deltaTime;
+            anim.SetBool("isIdle", true);
+            //anim.SetBool("isAttacking", false);
+
+            anim.SetBool("isWalking", false);
+        }
+
+    }
     IEnumerator NewHeading()
     {
         while (true)
