@@ -43,7 +43,7 @@ public class EnemyHealth : MonoBehaviour {
     }
     public void minusHealthPellet()
     {
-        healthVal -= damage * 3;
+        healthVal -= damage * 8;
     }
 
     private void OnTriggerStay(Collider col)
