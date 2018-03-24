@@ -15,7 +15,7 @@ public class shoot : MonoBehaviour
 	void Update()
 	{
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetAxis("Fire1") != 0)
 		{
             Instantiate(bullet, firePoint.position, firePoint.rotation);
 		}

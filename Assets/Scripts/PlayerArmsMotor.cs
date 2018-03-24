@@ -16,7 +16,10 @@ public class PlayerArmsMotor : MonoBehaviour {
     [SerializeField]
     float time = 0.0f;
 
-	void Start ()
+    [SerializeField] private Rigidbody bullet;
+    [SerializeField] private Transform firePoint;
+
+    void Start ()
     {
         anim.SetBool("isIdleUnarmed", true);
     }
@@ -81,23 +84,21 @@ public class PlayerArmsMotor : MonoBehaviour {
 
 
 
-        if (shotgun.activeSelf == true && Input.GetMouseButtonDown(0))
+        if (shotgun.activeSelf == true && Input.GetAxisRaw("Fire1") != 0)
         {
-            
+
             StartCoroutine(ShotgunFire());
-            
-        }
-        else
-        {
             StopCoroutine(ShotgunFire());
-            
+
         }
+
 
     }
 
     IEnumerator ShotgunFire()
     {
         anim.SetBool("isShootShotgun", true);
+        Instantiate(bullet, firePoint.position, firePoint.rotation);
         muzzleFlash1.SetActive(true);
         muzzleFlash2.SetActive(true);
         yield return new WaitForSeconds(time);
