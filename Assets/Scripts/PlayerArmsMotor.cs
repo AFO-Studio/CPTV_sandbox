@@ -49,14 +49,14 @@ public class PlayerArmsMotor : MonoBehaviour {
 
 
 
-        if (emptyHands == true && Input.GetMouseButtonDown(0))
-        {
-            anim.SetBool("isPunching", true);
-        }
-        else
-        {
-            anim.SetBool("isPunching", false);
-        }
+        //if (emptyHands == true && Input.GetMouseButtonDown(0))
+        //{
+        //    anim.SetBool("isPunching", true);
+        //}
+        //else
+        //{
+        //    anim.SetBool("isPunching", false);
+        //}
 
         
 
