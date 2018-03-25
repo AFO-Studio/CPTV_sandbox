@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class pickup : MonoBehaviour
 {
@@ -57,7 +58,7 @@ public class pickup : MonoBehaviour
             pickupPrompt.SetActive(true);
             pickUp_text.text = "" + col.gameObject.tag + "";
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetButtonDown("A"))
             {
                 PlayerStats healthScript = FindObjectOfType<PlayerStats>();
                 healthScript.addHealthMedkit();
@@ -74,7 +75,7 @@ public class pickup : MonoBehaviour
                 pickupPrompt.SetActive(true);
                 pickUp_text.text = "" + col.gameObject.tag + "";
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetButtonDown("A"))
             {
                 PlayerStats healthScript = FindObjectOfType<PlayerStats>();
                 healthScript.addHealthBandage();
@@ -89,7 +90,7 @@ public class pickup : MonoBehaviour
             pickupPrompt.SetActive(true);
             pickUp_text.text = "" + col.gameObject.tag + "";
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetButtonDown("A"))
             {
 
                 Destroy(col.gameObject);
@@ -105,7 +106,7 @@ public class pickup : MonoBehaviour
             pickupPrompt.SetActive(true);
             pickUp_text.text = "" + col.gameObject.tag + "";
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetButtonDown("A"))
             {
 
                 Destroy(col.gameObject);

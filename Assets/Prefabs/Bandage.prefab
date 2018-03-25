@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 136071134052246578}
   - component: {fileID: 54787504825270228}
   - component: {fileID: 108902070629053946}
+  - component: {fileID: 114333086325737556}
   m_Layer: 0
   m_Name: Bandage
   m_TagString: Bandage
@@ -123,8 +124,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.5808823, b: 0.5808823, a: 0.753}
-  m_Intensity: 7
-  m_Range: 1.82
+  m_Intensity: 2
+  m_Range: 2
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -134,7 +135,7 @@ Light:
     m_Strength: 1
     m_Bias: 2
     m_NormalBias: 0
-    m_NearPlane: 0.02
+    m_NearPlane: 0.028599998
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -149,6 +150,31 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114333086325737556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1407626111566982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafc90245bfe9e2408e358f71deace2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SampleCount: 8
+  ScatteringCoef: 0.5
+  ExtinctionCoef: 0.01
+  SkyboxExtinctionCoef: 0.9
+  MieG: 0.1
+  HeightFog: 0
+  HeightScale: 0.1
+  GroundLevel: 0
+  Noise: 0
+  NoiseScale: 0.015
+  NoiseIntensity: 1
+  NoiseIntensityOffset: 0.3
+  NoiseVelocity: {x: 3, y: 3}
+  MaxRayLength: 400
 --- !u!136 &136071134052246578
 CapsuleCollider:
   m_ObjectHideFlags: 1
