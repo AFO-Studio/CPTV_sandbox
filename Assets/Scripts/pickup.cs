@@ -58,7 +58,7 @@ public class pickup : MonoBehaviour
             pickupPrompt.SetActive(true);
             pickUp_text.text = "" + col.gameObject.tag + "";
 
-            if (Input.GetButtonDown("A"))
+            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.E))
             {
                 PlayerStats healthScript = FindObjectOfType<PlayerStats>();
                 healthScript.addHealthMedkit();
@@ -75,7 +75,7 @@ public class pickup : MonoBehaviour
                 pickupPrompt.SetActive(true);
                 pickUp_text.text = "" + col.gameObject.tag + "";
 
-            if (Input.GetButtonDown("A"))
+            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.E))
             {
                 PlayerStats healthScript = FindObjectOfType<PlayerStats>();
                 healthScript.addHealthBandage();
@@ -90,7 +90,7 @@ public class pickup : MonoBehaviour
             pickupPrompt.SetActive(true);
             pickUp_text.text = "" + col.gameObject.tag + "";
 
-            if (Input.GetButtonDown("A"))
+            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.E))
             {
 
                 Destroy(col.gameObject);
@@ -106,7 +106,7 @@ public class pickup : MonoBehaviour
             pickupPrompt.SetActive(true);
             pickUp_text.text = "" + col.gameObject.tag + "";
 
-            if (Input.GetButtonDown("A"))
+            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.E))
             {
 
                 Destroy(col.gameObject);

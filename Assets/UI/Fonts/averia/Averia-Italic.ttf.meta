@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 47b37351841bc874090ffea5efe04a4b
+timeCreated: 1521968029
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Averia
+  fontNames:
+  - Averia
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 45b0f2b4fbbde5f4982e8f7abda909b1, type: 3}
+  - {fileID: 12800000, guid: 144b0996b9a596e46a2eefa9b9a9006b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
