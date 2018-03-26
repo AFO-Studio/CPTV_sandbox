@@ -17,11 +17,15 @@ public class pickup : MonoBehaviour
     public bool SwordEquiped = false;
     public bool ShotgunEquiped = false;
 
+    [SerializeField] GameObject Player;
+    Animator anim;
+
     // Use this for initialization
     void Start()
     {
         Prompt.SetActive(false);
         pickupPrompt.SetActive(false);
+        anim = Player.GetComponent<Animator>();
        
     }
 
@@ -57,10 +61,12 @@ public class pickup : MonoBehaviour
             Prompt.SetActive(true);
             pickupPrompt.SetActive(true);
             pickUp_text.text = "" + col.gameObject.tag + "";
+            anim.SetBool("PickUpItemInRange", true);
 
-            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.F))
             {
                 PlayerStats healthScript = FindObjectOfType<PlayerStats>();
+                anim.SetBool("PickUpItemInRange", false);
                 healthScript.addHealthMedkit();
                 Destroy(col.gameObject);
 
@@ -68,20 +74,23 @@ public class pickup : MonoBehaviour
                 pickupPrompt.SetActive(false);
             }
         }
-      
+        anim.SetBool("PickUpItemInRange", false);
+
         if (col.gameObject.tag == "Bandage")
             {
                 Prompt.SetActive(true);
                 pickupPrompt.SetActive(true);
                 pickUp_text.text = "" + col.gameObject.tag + "";
+            anim.SetBool("PickUpItemInRange", true);
 
-            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.F))
             {
                 PlayerStats healthScript = FindObjectOfType<PlayerStats>();
                 healthScript.addHealthBandage();
                 Destroy(col.gameObject);
                 Prompt.SetActive(false);
                 pickupPrompt.SetActive(false);
+                anim.SetBool("PickUpItemInRange", false);
             }
         }
         if (col.gameObject.tag == "Sword")
@@ -89,10 +98,11 @@ public class pickup : MonoBehaviour
             Prompt.SetActive(true);
             pickupPrompt.SetActive(true);
             pickUp_text.text = "" + col.gameObject.tag + "";
+            anim.SetBool("PickUpItemInRange", true);
 
-            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.F))
             {
-
+                anim.SetBool("PickUpItemInRange", false);
                 Destroy(col.gameObject);
                 Sword.SetActive(true);
                 Prompt.SetActive(false);
@@ -106,7 +116,7 @@ public class pickup : MonoBehaviour
             pickupPrompt.SetActive(true);
             pickUp_text.text = "" + col.gameObject.tag + "";
 
-            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.F))
             {
 
                 Destroy(col.gameObject);

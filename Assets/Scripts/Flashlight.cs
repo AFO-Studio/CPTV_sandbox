@@ -13,7 +13,7 @@ public class Flashlight : MonoBehaviour {
 
 	void Update ()
   {
-    if (Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("X"))
+    if (Input.GetKeyDown(KeyCode.Tab) || Input.GetButtonDown("X"))
     {
       flashLight.enabled = !flashLight.enabled;
     }

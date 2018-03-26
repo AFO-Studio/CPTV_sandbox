@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1643663873070948}
   m_IsPrefabParent: 1
+--- !u!1 &1517675301598340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4454437744708506}
+  - component: {fileID: 108812268682668046}
+  m_Layer: 0
+  m_Name: Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1643663873070948
 GameObject:
   m_ObjectHideFlags: 0
@@ -26,27 +42,40 @@ GameObject:
   - component: {fileID: 65657228483292782}
   - component: {fileID: 65516958258953952}
   - component: {fileID: 108346551864576688}
-  - component: {fileID: 114903344301085134}
   m_Layer: 0
   m_Name: Medkit
   m_TagString: Medkit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!4 &4454437744708506
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517675301598340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.086, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4673424977431614}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4673424977431614
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643663873070948}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1945496, y: 1.4, z: 51.096313}
+  m_LocalRotation: {x: -0, y: 0.34105113, z: -0, w: 0.94004476}
+  m_LocalPosition: {x: 4.67, y: 0.63, z: 46.63}
   m_LocalScale: {x: 10.740766, y: 10.740771, z: 10.740771}
-  m_Children: []
+  m_Children:
+  - {fileID: 4454437744708506}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20.944, y: 81.254005, z: -23.488}
+  m_LocalEulerAnglesHint: {x: 0, y: 39.882004, z: 0}
 --- !u!23 &23921146588753280
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -72,7 +101,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
+  m_StitchLightmapSeams: 1
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -155,7 +184,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.5808823, b: 0.5808823, a: 0.753}
   m_Intensity: 2
-  m_Range: 2
+  m_Range: 2.34
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -165,43 +194,54 @@ Light:
     m_Strength: 1
     m_Bias: 2
     m_NormalBias: 0
-    m_NearPlane: 0.028599998
+    m_NearPlane: 0.044999998
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_Flare: {fileID: 0}
+  m_Flare: {fileID: 12100000, guid: 51e9e94bd0b2a4b96a5d00f9441133a7, type: 2}
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0
+  m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114903344301085134
-MonoBehaviour:
+--- !u!108 &108812268682668046
+Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1643663873070948}
+  m_GameObject: {fileID: 1517675301598340}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dafc90245bfe9e2408e358f71deace2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SampleCount: 8
-  ScatteringCoef: 0.5
-  ExtinctionCoef: 0.01
-  SkyboxExtinctionCoef: 0.9
-  MieG: 0.1
-  HeightFog: 0
-  HeightScale: 0.1
-  GroundLevel: 0
-  Noise: 0
-  NoiseScale: 0.015
-  NoiseIntensity: 1
-  NoiseIntensityOffset: 0.3
-  NoiseVelocity: {x: 3, y: 3}
-  MaxRayLength: 400
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 0.8897059, b: 0.8897059, a: 1}
+  m_Intensity: 1
+  m_Range: 7
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 0.174
+    m_Bias: 0
+    m_NormalBias: 0
+    m_NearPlane: 0.1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 12100000, guid: 6174f2fe01a3c418090a23ec2f36e684, type: 2}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
