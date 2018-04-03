@@ -1,15 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class gunReact : MonoBehaviour {
-
+public class GunReact : MonoBehaviour
+{
     [SerializeField]
-    Animator anim;
-
-	void Start () {
-        
-	}
+    private Animator anim;
 
     private void FixedUpdate()
     {

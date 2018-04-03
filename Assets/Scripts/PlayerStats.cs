@@ -162,7 +162,7 @@ public class PlayerStats : MonoBehaviour {
 
    private void OnTriggerExit(Collider col)
    {
-       pickup DangerPrompt = FindObjectOfType<pickup>();
+       Pickup DangerPrompt = FindObjectOfType<Pickup>();
        DangerPrompt.pickUp_text.color = Color.black;
        DangerPrompt.pickupPrompt.SetActive(false);
 

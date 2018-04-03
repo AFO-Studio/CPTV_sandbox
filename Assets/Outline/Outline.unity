@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 9
   m_Fog: 1
   m_FogColor: {r: 1, g: 1, b: 1, a: 1}
   m_FogMode: 3
@@ -38,7 +38,8 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.3957542, g: 0.37363443, b: 0.36468494, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -54,11 +55,10 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -190,6 +190,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973325503074138, guid: 97d1989ebb7ff5040b1b07b71a5ed9df, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97d1989ebb7ff5040b1b07b71a5ed9df, type: 2}
@@ -341,8 +345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbac0ee92824e5f479c536d4a88e50e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Outline: {fileID: 4800000, guid: b557b39ab7ee4894e9b44cf34dcb20b4, type: 3}
-  Draw: {fileID: 4800000, guid: fa3572f688d3c024fb9e4d2c813cfcce, type: 3}
+  outline: {fileID: 0}
+  draw: {fileID: 0}
 --- !u!81 &1718982645
 AudioListener:
   m_ObjectHideFlags: 0

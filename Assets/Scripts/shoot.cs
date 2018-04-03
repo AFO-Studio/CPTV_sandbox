@@ -1,23 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class shoot : MonoBehaviour
+public class Shoot : MonoBehaviour
 {
 	public Rigidbody bullet;
 	public Transform firePoint;
 
-    Animator anim;
-	void Start()
-	{
-	}
+    private Animator anim;
 
 	void Update()
 	{
-
 		if (Input.GetAxis("Fire1") != 0)
-		{
             Instantiate(bullet, firePoint.position, firePoint.rotation);
-		}
 	}
 }

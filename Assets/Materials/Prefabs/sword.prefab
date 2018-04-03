@@ -35,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1199538211228178}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0328283, y: 0.5168493, z: 19.045204}
+  m_LocalRotation: {x: 0.48659065, y: 0.578199, z: 0.4216959, w: 0.50108683}
+  m_LocalPosition: {x: -26.62616, y: 1.1848606, z: 54.465485}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,8 +55,10 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 96b7fd64b0f8a514481d1496c1084cea, type: 3}
+  - {fileID: 2100002, guid: 96b7fd64b0f8a514481d1496c1084cea, type: 3}
+  - {fileID: 2100004, guid: 96b7fd64b0f8a514481d1496c1084cea, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,3 +102,4 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityStandardAssets.CrossPlatformInput;
 
-public class pickup : MonoBehaviour
+public class Pickup : MonoBehaviour
 {
     public GameObject Prompt;
     public GameObject pickupPrompt;
@@ -12,46 +11,36 @@ public class pickup : MonoBehaviour
     private GameObject Sword;
     [SerializeField]
     private GameObject Shotgun;
-    
 
     public bool SwordEquiped = false;
     public bool ShotgunEquiped = false;
 
-    [SerializeField] GameObject Player;
-    Animator anim;
+    private GameObject player;
+    private Animator anim;
 
     // Use this for initialization
     void Start()
     {
+        player = GameController.Player;
+
         Prompt.SetActive(false);
         pickupPrompt.SetActive(false);
-        anim = Player.GetComponent<Animator>();
-       
+        anim = player.GetComponentInChildren<Animator>();
     }
 
     private void Update()
     {
         if(Sword.activeSelf == true && Input.GetAxis("Mouse ScrollWheel") < 0)
-        {
             Sword.SetActive(false);
-        }
 
         if (SwordEquiped == true && Sword.activeSelf == false && Input.GetAxis("Mouse ScrollWheel") > 0)
-        {
             Sword.SetActive(true);
-        }
 
         if (Shotgun.activeSelf == true && Input.GetAxis("Mouse ScrollWheel") < 0)
-        {
             Shotgun.SetActive(false);
-        }
 
         if (ShotgunEquiped == true && Shotgun.activeSelf == false && Input.GetAxis("Mouse ScrollWheel") > 0)
-        {
             Shotgun.SetActive(true);
-        }
-
-
     }
 
     private void OnTriggerStay(Collider col)
@@ -134,8 +123,4 @@ public class pickup : MonoBehaviour
         Prompt.SetActive(false);
         pickupPrompt.SetActive(false);
     }
-
 }
-        
-    
-
