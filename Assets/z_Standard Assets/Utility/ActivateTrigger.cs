@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -24,7 +23,6 @@ namespace UnityStandardAssets.Utility
         public int triggerCount = 1;
         public bool repeatTrigger = false;
 
-
         private void DoActivateTrigger()
         {
             triggerCount--;
@@ -34,58 +32,45 @@ namespace UnityStandardAssets.Utility
                 Object currentTarget = target ?? gameObject;
                 Behaviour targetBehaviour = currentTarget as Behaviour;
                 GameObject targetGameObject = currentTarget as GameObject;
+
                 if (targetBehaviour != null)
-                {
                     targetGameObject = targetBehaviour.gameObject;
-                }
 
                 switch (action)
                 {
                     case Mode.Trigger:
                         if (targetGameObject != null)
-                        {
                             targetGameObject.BroadcastMessage("DoActivateTrigger");
-                        }
                         break;
                     case Mode.Replace:
                         if (source != null)
                         {
                             if (targetGameObject != null)
                             {
-                                Instantiate(source, targetGameObject.transform.position,
-                                            targetGameObject.transform.rotation);
-                                DestroyObject(targetGameObject);
+                                Instantiate(source, targetGameObject.transform.position, targetGameObject.transform.rotation);
+                                Destroy(targetGameObject);
                             }
                         }
                         break;
                     case Mode.Activate:
                         if (targetGameObject != null)
-                        {
                             targetGameObject.SetActive(true);
-                        }
                         break;
                     case Mode.Enable:
                         if (targetBehaviour != null)
-                        {
                             targetBehaviour.enabled = true;
-                        }
                         break;
                     case Mode.Animate:
                         if (targetGameObject != null)
-                        {
                             targetGameObject.GetComponent<Animation>().Play();
-                        }
                         break;
                     case Mode.Deactivate:
                         if (targetGameObject != null)
-                        {
                             targetGameObject.SetActive(false);
-                        }
                         break;
                 }
             }
         }
-
 
         private void OnTriggerEnter(Collider other)
         {

@@ -1,26 +1,32 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 public class Path : MonoBehaviour
 {
     public List<GameObject> nodes;
-    List<PathSegment> segments;
+    //List<PathSegment> segments;
 
-    void Start()
+    /*
+    private void Start()
     {
         segments = GetSegments();
     }
+    */
+
     public List<PathSegment> GetSegments()
     {
         List<PathSegment> segments = new List<PathSegment>();
         int i;
+
         for (i = 0; i < nodes.Count - 1; i++)
         {
             Vector3 src = nodes[i].transform.position;
             Vector3 dst = nodes[i + 1].transform.position;
+
             PathSegment segment = new PathSegment(src, dst);
+
             segments.Add(segment);
         }
+
         return segments;
     }
     //public float GetParam(Vector3 position, float lastParam)

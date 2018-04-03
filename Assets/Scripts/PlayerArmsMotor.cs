@@ -12,42 +12,30 @@ public class PlayerArmsMotor : MonoBehaviour {
     public GameObject muzzleFlash1;
     public GameObject muzzleFlash2;
 
-    bool emptyHands;
+    private bool emptyHands;
     [SerializeField]
-    float time = 0.0f;
+    private float time = 0.0f;
 
     [SerializeField] private Rigidbody bullet;
     [SerializeField] private Transform firePoint;
 
-    void Start ()
+    private void Start ()
     {
         anim.SetBool("isIdleUnarmed", true);
     }
 	
 	
-	void Update ()
+	private void Update ()
     {
-		if(sword.activeSelf == true 
-            || shotgun.activeSelf == true)
-        {
+		if (sword.activeSelf == true  || shotgun.activeSelf == true)
             emptyHands = false;
-        }
         else
-        {
             emptyHands = true;
-        }
 
-
-        if(emptyHands == false)
-        {
+        if (emptyHands == false)
             anim.SetBool("isIdleUnarmed", false);
-        }
         if (emptyHands == true)
-        {
             anim.SetBool("isIdleUnarmed", true);
-        }
-
-
 
         //if (emptyHands == true && Input.GetMouseButtonDown(0))
         //{
@@ -56,46 +44,26 @@ public class PlayerArmsMotor : MonoBehaviour {
         //else
         //{
         //    anim.SetBool("isPunching", false);
-        //}
-
-        
+        //}        
 
         if (sword.activeSelf == true && Input.GetMouseButtonDown(0))
-        {
             anim.SetBool("isStabbingSword", true);
-        }
         else
-        {
             anim.SetBool("isStabbingSword", false);
-        }
-
-
 
         if (shotgun.activeSelf == true)
-        {
             anim.SetBool("isIdleShotgun", true);
-            
-        }
         else
-        {
             anim.SetBool("isIdleShotgun", false);
-        }
-
-
-
 
         if (shotgun.activeSelf == true && Input.GetAxisRaw("Fire1") != 0)
         {
-
             StartCoroutine(ShotgunFire());
             StopCoroutine(ShotgunFire());
-
         }
-
-
     }
 
-    IEnumerator ShotgunFire()
+    private IEnumerator ShotgunFire()
     {
         anim.SetBool("isShootShotgun", true);
         Instantiate(bullet, firePoint.position, firePoint.rotation);
@@ -111,17 +79,11 @@ public class PlayerArmsMotor : MonoBehaviour {
     private void OnTriggerStay(Collider col)
     {
         if (col.gameObject.tag == "Untagged")
-        {
             anim.SetBool("HitDeWall", true);
-        }
-
     }
     private void OnTriggerExit(Collider col)
     {
         if (col.gameObject.tag == "Untagged")
-        {
             anim.SetBool("HitDeWall", false);
-        }
-
     }
 }

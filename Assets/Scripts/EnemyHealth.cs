@@ -1,34 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealth : MonoBehaviour {
-
-    [SerializeField]
-    public float healthVal;
+public class EnemyHealth : MonoBehaviour
+{
     [SerializeField]
     private Slider healthBar;
+
     private float maxHealth = 100.0f;
     private float minHealth = 0f;
+
+    public float currentHealth;
+
     public float damage = 10.0f;
 
     void Start ()
     {
-        healthVal = 100;
+        currentHealth = 100;
         maxHealth = 100;
-}
+    }
 
     private void FixedUpdate()
     {
-        healthBar.value = healthVal;
+        healthBar.value = currentHealth;
 
+        if(currentHealth >= maxHealth)
+            currentHealth = 100;
 
-        if(healthVal >= maxHealth)
-        {
-            healthVal = 100;
-        }
-        if (healthVal <= minHealth)
+        if (currentHealth <= minHealth)
         {
             Destroy(gameObject);
 
@@ -37,26 +35,24 @@ public class EnemyHealth : MonoBehaviour {
         }
     }
 
-    public void minusHealth()
+    public void DecreaseHealth(float damage = 1f)
     {
-        healthVal -= damage;
-    }
-    public void minusHealthPellet()
-    {
-        healthVal -= damage * 8;
+        currentHealth -= damage * damage;
     }
 
     private void OnTriggerStay(Collider col)
     {
         if (col.gameObject.tag == "Sword")
         {
-            minusHealth();
+            DecreaseHealth();
+
             PlayerStats playerScript = FindObjectOfType<PlayerStats>();
             playerScript.addXP();
         }
         if (col.gameObject.tag == "Bullet")
         {
-            minusHealthPellet();
+            DecreaseHealth(8);
+
             PlayerStats playerScript = FindObjectOfType<PlayerStats>();
             playerScript.addXP();
         }
@@ -64,7 +60,7 @@ public class EnemyHealth : MonoBehaviour {
     }
     private void OnTriggerExit(Collider col)
     {
-        pickup DangerPrompt = FindObjectOfType<pickup>();
+        Pickup DangerPrompt = FindObjectOfType<Pickup>();
         DangerPrompt.Prompt.SetActive(false);
         DangerPrompt.pickupPrompt.SetActive(false);
     }
