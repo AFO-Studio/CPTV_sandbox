@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 124832986118908490}
   - component: {fileID: 65714987307837114}
   - component: {fileID: 108733664826629148}
-  - component: {fileID: 114218028243594458}
   - component: {fileID: 114651468995717058}
   m_Layer: 11
   m_Name: FirstPersonCharacter
@@ -1112,7 +1111,7 @@ GameObject:
   - component: {fileID: 222255593343374388}
   - component: {fileID: 114478090134465428}
   m_Layer: 5
-  m_Name: E-key
+  m_Name: A-Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1369,7 +1368,7 @@ GameObject:
   - component: {fileID: 114593350339384196}
   - component: {fileID: 114457969482615494}
   - component: {fileID: 65030287627507766}
-  - component: {fileID: 114800082821663364}
+  - component: {fileID: 114738734978665804}
   m_Layer: 11
   m_Name: FPSController
   m_TagString: Player
@@ -3090,18 +3089,6 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!114 &114218028243594458
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1008847417820568}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e21bcabb18347604a91d7297638bf0c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 95124966165561790}
 --- !u!114 &114227483205058078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3260,7 +3247,7 @@ MonoBehaviour:
   muzzleFlash1: {fileID: 1107981851069058}
   muzzleFlash2: {fileID: 1332548750315212}
   time: 0.7
-  bullet: {fileID: 54976760170292012, guid: c786e766e36133a4cae9c5d2b73dc394, type: 2}
+  bullet: {fileID: 54976760170292012, guid: 5991a1b9ec97ef9448e06d8f43c9c295, type: 2}
   firePoint: {fileID: 4694467228280730}
 --- !u!114 &114468898260129948
 MonoBehaviour:
@@ -3316,12 +3303,12 @@ MonoBehaviour:
   hpVal: 100
   xpVal: 0
   staminaVal: 100
-  hpText: {fileID: 0}
-  lvlText: {fileID: 0}
-  xpText: {fileID: 0}
-  healthBar: {fileID: 0}
-  staminaBar: {fileID: 0}
-  xpBar: {fileID: 0}
+  hpText: {fileID: 114688000673347488}
+  lvlText: {fileID: 114940778464010854}
+  xpText: {fileID: 114876683016347794}
+  healthBar: {fileID: 114737480618502638}
+  staminaBar: {fileID: 114636812006978578}
+  xpBar: {fileID: 114010415970055852}
   medkitVal: 20
   bandageVal: 5
   damage: 0.01
@@ -3522,7 +3509,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114800082821663364
+--- !u!114 &114738734978665804
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3533,8 +3520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14950e5bb770cd4b9fd1e09c27892a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prompt: {fileID: 1777047905218044}
-  pickupPrompt: {fileID: 1669121176752542}
+  Prompt: {fileID: 1669121176752542}
+  pickupPrompt: {fileID: 1359618889256544}
   pickUp_text: {fileID: 114921537278707980}
   Sword: {fileID: 1300491381677566}
   Shotgun: {fileID: 1808945199015588}
