@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: baby
-  m_Shader: {fileID: 4800000, guid: 5e991fc4a74e3874cba7599c62c77f49, type: 3}
+  m_Shader: {fileID: 4800000, guid: 1bdb07c63a6e955428a584fbf1683964, type: 3}
   m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -18,6 +18,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture_1E9AFBDE:
+        m_Texture: {fileID: 2800000, guid: 52dde855d7c7bd344b37b6b21aceaf6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture_62F2B470:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture_F9FD6A6C:
+        m_Texture: {fileID: 2800000, guid: 52dde855d7c7bd344b37b6b21aceaf6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -66,7 +78,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_F0EBC7A5_Out:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_7506C33C: 0
+    - Vector1_C940DDF: 20.1
+    - Vector1_D5433D62: 200
+    - Vector1_D8A7DFC4: 10.3
+    - Vector1_DE87C84C: 100
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -87,6 +108,9 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - Color_3FBF3E72: {r: 1, g: 1, b: 1, a: 0}
+    - Color_5603E44C: {r: 1, g: 1, b: 1, a: 1}
+    - Color_8D45B560: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0.04827571, b: 1, a: 1}
     - _PowerColor: {r: 3, g: 0, b: 0, a: 1}
