@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: 1bdb07c63a6e955428a584fbf1683964, type: 3}
+  m_Name: BabySkin-plain
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -18,18 +18,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture_1E9AFBDE:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture_62F2B470:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture_F9FD6A6C:
-        m_Texture: {fileID: 2800000, guid: 318d5c261b6a4487a97b0933da51838a, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -70,16 +58,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_F0EBC7A5_Out:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_7506C33C: 0
-    - Vector1_C940DDF: 0
-    - Vector1_D5433D62: -100
-    - Vector1_D8A7DFC4: 6
-    - Vector1_DE87C84C: -100
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -101,9 +80,6 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_3FBF3E72: {r: 1, g: 1, b: 1, a: 0}
-    - Color_5603E44C: {r: 1, g: 0, b: 0, a: 0}
-    - Color_8D45B560: {r: 1, g: 0, b: 0, a: 0}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
